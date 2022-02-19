@@ -52,10 +52,13 @@ arrMovies.sort();
 let indexArr = 0;
 let chekParametr = true;
 
-allUlelement.forEach( (item,i) => {
-    i++;
-    item.textContent = i + ' ' + arrMovies[indexArr];
-    indexArr++;
+allUlelement.forEach( (item,index) => {
+    
+    let numbering = index + 1;
+    item.textContent = numbering + ' ' + arrMovies[index];
+    let deleteDiv = document.createElement("div");
+    deleteDiv.className = "delete";
+    item.append(deleteDiv);
 
 
 } );
